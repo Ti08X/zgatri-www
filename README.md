@@ -51,8 +51,8 @@ npm run dev
 ## 上线前内容确认
 
 - 联系邮箱与社交账号按要求留空，页面显示“联系与社交入口即将开放”。有真实地址后修改 Contact 区域即可；不要添加虚构链接。
-- Projects 当前呈现主站和“持续更新”的逐光笔记，没有虚构客户、成果或文章。
-- 博客入口链接到 blog.zgatri.com；逐光小店提供两个入口：普通购买 https://catfk.com/shop/zgatri，需要开票时使用 https://zgatri.trade。
+- Projects 当前呈现主站、持续更新的逐光笔记，以及正在营业的逐光小店。
+- 博客入口链接到 blog.zgatri.com；逐光小店统一链接到 https://zgatri.trade。
 - canonical、Open Graph 和 sitemap 已使用正式域名 https://www.zgatri.com/；更换域名时同步修改。
 - 尚未发布到 Cloudflare，也未修改任何 DNS。
 

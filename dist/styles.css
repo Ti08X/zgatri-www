@@ -32,4 +32,3 @@
 }
 @media(max-width:800px){.hero-bottom>a{margin-left:auto}.motion-toggle{flex-basis:auto}.motion-on .orbit-three{animation:none}}
 @media(prefers-reduced-motion:reduce){.motion-on .light-field *,.motion-on .hero h1 span{animation:none!important}}
-.shop-actions{display:flex;flex-direction:column;gap:.75rem;margin-top:1.5rem}.shop-link{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 1rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;transition:transform .2s ease,opacity .2s ease}.shop-link:hover{transform:translateY(-2px)}.invoice-shop{opacity:.72;font-size:.92rem}
