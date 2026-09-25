@@ -32,3 +32,4 @@
 }
 @media(max-width:800px){.hero-bottom>a{margin-left:auto}.motion-toggle{flex-basis:auto}.motion-on .orbit-three{animation:none}}
 @media(prefers-reduced-motion:reduce){.motion-on .light-field *,.motion-on .hero h1 span{animation:none!important}}
+.header .brand-mark{display:block;flex:none;width:36px;height:36px;border:0}
