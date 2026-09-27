@@ -51,10 +51,10 @@ npm run dev
 ## 上线前内容确认
 
 - 联系邮箱与社交账号按要求留空，页面显示“联系与社交入口即将开放”。有真实地址后修改 Contact 区域即可；不要添加虚构链接。
-- Projects 当前呈现主站、持续更新的逐光笔记，以及正在营业的逐光小店。
-- 博客入口链接到 blog.zgatri.com；逐光小店统一链接到 https://zgatri.trade。
+- Projects 当前呈现主站、持续更新的逐光笔记、正在营业的逐光小店，以及已上线的 Z-HUB AI 网关。
+- 博客入口链接到 blog.zgatri.com；逐光小店统一链接到 https://zgatri.trade；Z-HUB 链接到 https://api.zgatri.com/。
 - canonical、Open Graph 和 sitemap 已使用正式域名 https://www.zgatri.com/；更换域名时同步修改。
-- 尚未发布到 Cloudflare，也未修改任何 DNS。
+- 主站由 GitHub `main` 分支触发 Cloudflare Pages 更新；修改站点内容不需要改动 DNS。
 
 ## 设计与性能
 

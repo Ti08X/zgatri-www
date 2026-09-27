@@ -33,3 +33,8 @@
 @media(max-width:800px){.hero-bottom>a{margin-left:auto}.motion-toggle{flex-basis:auto}.motion-on .orbit-three{animation:none}}
 @media(prefers-reduced-motion:reduce){.motion-on .light-field *,.motion-on .hero h1 span{animation:none!important}}
 .header .brand-mark{display:block;flex:none;width:36px;height:36px;border:0}
+.destinations{grid-template-columns:repeat(3,minmax(0,1fr))}
+.destinations .destination-bottom{margin-top:auto;flex-wrap:wrap}
+.destination.api{background:linear-gradient(120deg,#112535,#0a1a2c);border-color:#2d5d68}
+.destination.api:hover{border-color:var(--cyan)}
+@media(max-width:980px){.destinations{grid-template-columns:1fr}}
