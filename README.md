@@ -51,8 +51,8 @@ npm run dev
 ## 上线前内容确认
 
 - Contact 区域提供 Telegram 联系入口：https://t.me/zgatri。
-- Projects 当前呈现主站、持续更新的逐光笔记、正在营业的逐光小店，以及测试中的 Z-HUB AI 网关。
-- 博客入口链接到 blog.zgatri.com；逐光小店统一链接到 https://zgatri.trade；Z-HUB 链接到 https://api.zgatri.com/。
+- Projects 当前呈现主站、持续更新的逐光笔记，以及正在营业的逐光小店。
+- 博客入口链接到 blog.zgatri.com；逐光小店统一链接到 https://zgatri.trade。
 - canonical、Open Graph 和 sitemap 已使用正式域名 https://www.zgatri.com/；更换域名时同步修改。
 - 主站由 GitHub `main` 分支触发 Cloudflare Pages 更新；修改站点内容不需要改动 DNS。
 
