@@ -42,7 +42,7 @@ npm run dev
 
 - `dist/index.html`：所有品牌文案、板块、博客和商店入口。
 - `dist/styles.css`：颜色、光线几何、桌面/移动布局、键盘焦点和减少动画偏好。
-- `dist/main.js`：控制动态效果、减少动画偏好与进入视口时的轻量动画。
+- `dist/main.js`：仅更新页脚年份。
 - `dist/404.html`：独立错误页面，避免不存在的路径返回首页。
 - `dist/robots.txt` / `sitemap.xml`：搜索引擎爬取与站点地图。
 - `dist/_headers`：Cloudflare 响应安全头；普通本地预览不模拟此文件。
@@ -51,8 +51,7 @@ npm run dev
 ## 上线前内容确认
 
 - Contact 区域提供 Telegram 联系入口：https://t.me/zgatri。
-- NOW 展示构建品牌、公开记录和数字产品实践三项近况；不再重复网站导航。
-- EXPLORE 统一承载逐光笔记与逐光小店入口；页面依次为 ABOUT、PRINCIPLE、NOW、EXPLORE、CONNECT。
+- Projects 当前呈现主站、持续更新的逐光笔记，以及正在营业的逐光小店。
 - 博客入口链接到 blog.zgatri.com；逐光小店统一链接到 https://zgatri.trade。
 - canonical、Open Graph 和 sitemap 已使用正式域名 https://www.zgatri.com/；更换域名时同步修改。
 - 主站由 GitHub `main` 分支触发 Cloudflare Pages 更新；修改站点内容不需要改动 DNS。

@@ -47,7 +47,7 @@ if ('IntersectionObserver' in window) {
       observer.unobserve(entry.target);
     });
   }, { threshold: 0.08 });
-  document.querySelectorAll('.section-label, .about-content, .section-heading, .directions article, .now-item, .destination, .contact > div').forEach(element => observer.observe(element));
+  document.querySelectorAll('.section-label, .about-content, .section-heading, .directions article, .project, .destination, .contact > div').forEach(element => observer.observe(element));
   const heroObserver = new IntersectionObserver(([entry]) => {
     heroVisible = entry.isIntersecting;
     updateMotion();
