@@ -1,6 +1,6 @@
 # ZGATRI · 逐光AI
 
-可直接部署到 Cloudflare Pages 的纯静态个人品牌主站。HTML + CSS + 极少量 JavaScript，无第三方字体、图片、框架、运行时依赖或后端。关闭 JavaScript 后内容与导航仍正常可用。
+可直接部署到 Cloudflare Pages 的纯静态个人品牌主站。基于追光原型 v8 的 HTML + CSS + Three.js/WebGL 滚动体验，无后端。Three.js r128 随站点本地提供，字体通过 Google Fonts 加载。无法使用 WebGL 或关闭 JavaScript 时显示静态内容。
 
 ## 本地预览
 
@@ -41,8 +41,10 @@ npm run dev
 ## 内容与文件
 
 - `dist/index.html`：所有品牌文案、板块、博客和商店入口。
-- `dist/styles.css`：颜色、光线几何、桌面/移动布局、键盘焦点和减少动画偏好。
-- `dist/main.js`：仅更新页脚年份。
+- `dist/styles.css`：v8 原型样式、桌面/移动布局和键盘焦点。
+- `dist/main.js`：追光、粒子标志、线框构建、章节进度和 Motion On / Motion Off 控制。
+- `dist/vendor/three.r128.min.js`：本地 Three.js r128（MIT 许可，文件保留上游许可声明）。
+- `dist/no-motion.css`：关闭 JavaScript 时的静态内容布局。
 - `dist/404.html`：独立错误页面，避免不存在的路径返回首页。
 - `dist/robots.txt` / `sitemap.xml`：搜索引擎爬取与站点地图。
 - `dist/_headers`：Cloudflare 响应安全头；普通本地预览不模拟此文件。
@@ -50,12 +52,12 @@ npm run dev
 
 ## 上线前内容确认
 
-- Contact 区域提供 Telegram 联系入口：https://t.me/zgatri。
-- Projects 当前呈现主站、持续更新的逐光笔记，以及正在营业的逐光小店。
+- 联系章节提供 Telegram 联系入口：https://t.me/zgatri。
+- 五个进度节点：逐光、涌现、构建、笔记与小店、联系。
 - 博客入口链接到 blog.zgatri.com；逐光小店统一链接到 https://zgatri.trade。
 - canonical、Open Graph 和 sitemap 已使用正式域名 https://www.zgatri.com/；更换域名时同步修改。
 - 主站由 GitHub `main` 分支触发 Cloudflare Pages 更新；修改站点内容不需要改动 DNS。
 
 ## 设计与性能
 
-深空蓝、科技蓝、青色光线；以排版、轨道和抽象光束表达“逐光”。系统字体、本地样式，无外部请求、追踪脚本或 Cookie。网页内容可直接被搜索引擎读取；包含标题、描述、canonical、Open Graph、语义化分区及站点地图。手机采用单列布局。没有真实表单或假提交功能。
+保留追光原型 v8 的全屏追光、粒子、线框场景与大字排版。支持 Motion On / Motion Off 和系统减少动态效果偏好；暂停动态时仍可滚动切换章节。手机使用原型的窄屏布局。脚本和样式在站内提供，外部请求仅用于 Google Fonts；没有追踪脚本、Cookie 或表单。保留正式标题、描述、canonical、Open Graph、favicon 和站点地图。
