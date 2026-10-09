@@ -2,10 +2,19 @@
   "name": "zgatri-home",
   "version": "1.0.0",
   "private": true,
-  "description": "ZGATRI 逐光AI static brand website",
+  "description": "ZGATRI \u9010\u5149AI static brand website",
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "preview": "node scripts/serve.mjs",
-    "check": "node scripts/check.mjs"
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "refresh:blog": "node scripts/refresh-blog-snapshot.mjs",
+    "refresh:shop": "node scripts/refresh-shop-snapshot.mjs"
+  },
+  "dependencies": {
+    "fast-xml-parser": "5.11.2"
+  },
+  "devDependencies": {
+    "wrangler": "4.149.0"
   }
 }

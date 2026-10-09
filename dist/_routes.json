@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "include": [
+    "/api/latest-posts",
+    "/api/latest-posts/",
+    "/api/shop-categories",
+    "/api/shop-categories/"
+  ],
+  "exclude": []
+}

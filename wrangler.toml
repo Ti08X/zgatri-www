@@ -1,0 +1,12 @@
+name = "zgatri-www"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-09-15"
+
+[[kv_namespaces]]
+binding = "BLOG_CACHE"
+id = "3d1bbf6189244e76837ce30aa5938375"
+
+[env.production]
+[[env.production.kv_namespaces]]
+binding = "BLOG_CACHE"
+id = "3d1bbf6189244e76837ce30aa5938375"

@@ -1,0 +1,12 @@
+name = "zgatri-blog-sync"
+main = "worker.mjs"
+compatibility_date = "2026-10-01"
+workers_dev = false
+
+[triggers]
+# 00:00 and 12:00 UTC, equivalent to 08:00 and 20:00 Asia/Shanghai.
+crons = ["0 */12 * * *"]
+
+[[kv_namespaces]]
+binding = "BLOG_CACHE"
+id = "REPLACE_WITH_BLOG_CACHE_NAMESPACE_ID"

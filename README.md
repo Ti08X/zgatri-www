@@ -1,18 +1,19 @@
 # ZGATRI · 逐光AI
 
-可直接部署到 Cloudflare Pages 的纯静态个人品牌主站。基于追光原型 v8 的 HTML + CSS + Three.js/WebGL 滚动体验，无后端。Three.js r128 随站点本地提供，字体通过 Google Fonts 加载。无法使用 WebGL 或关闭 JavaScript 时显示静态内容。
+可直接部署到 Cloudflare Pages 的个人品牌主站。基于追光原型 v8 的 HTML + CSS + Three.js/WebGL 滚动体验，配有读取博客缓存的 Pages Function。Three.js r128 随站点本地提供，字体通过 Google Fonts 加载。无法使用 WebGL 或关闭 JavaScript 时显示静态内容。
 
 ## 本地预览
 
-安装 Node.js 18 或更新版本，在本目录执行：
+安装 Node.js 22 或更新版本，在本目录执行：
 
 ```sh
+npm ci
 npm run dev
 ```
 
-打开 http://127.0.0.1:4173 。无需 npm install。按 Ctrl+C 停止；如端口占用，先关闭之前的预览进程。
+打开 http://127.0.0.1:4173 。首次预览先运行 `npm ci`。按 Ctrl+C 停止；如端口占用，先关闭之前的预览进程。
 
-也可使用 Python：`python3 -m http.server 4173 --directory dist`。
+Python 静态服务器只能展示快照；使用 `npm run dev` 可同时验证博客缓存接口。
 
 检查：`npm run check`。静态文件已完整放在 dist，不需要构建。
 
@@ -29,7 +30,7 @@ npm run dev
 
 ### 方式二：直接上传
 
-在 Pages 创建 Direct Upload 项目，上传 `dist` 文件夹或将 dist 内所有文件打成 ZIP 上传。压缩包根目录须直接包含 index.html，不要上传整个源码项目。Direct Upload 项目后续切换 Git 集成通常需新建项目，长期维护优先选方式一。
+包含博客缓存接口时，使用上面的 Git 部署或从项目根目录运行 Wrangler；控制台拖拽不编译 `functions/`。仅静态演示可在 Pages 创建 Direct Upload 项目，上传 `dist` 文件夹或将 dist 内所有文件打成 ZIP 上传。压缩包根目录须直接包含 index.html，不要上传整个源码项目。Direct Upload 项目后续切换 Git 集成通常需新建项目，长期维护优先选方式一。
 
 也可使用官方 CLI：`npx wrangler pages deploy dist --project-name=你的Pages项目名`。首次使用按提示登录。此命令由你实际发布时运行。
 
@@ -53,11 +54,19 @@ npm run dev
 ## 上线前内容确认
 
 - 联系章节提供 Telegram 联系入口：https://t.me/zgatri。
-- 五个进度节点：逐光、涌现、构建、笔记与小店、联系。
+- 六个进度节点：逐光、涌现、构建、笔记、小店、联系。
 - 博客入口链接到 blog.zgatri.com；逐光小店统一链接到 https://shop.zgatri.com。
 - canonical、Open Graph 和 sitemap 已使用正式域名 https://www.zgatri.com/；更换域名时同步修改。
 - 主站由 GitHub `main` 分支触发 Cloudflare Pages 更新；修改站点内容不需要改动 DNS。
 
 ## 设计与性能
 
-保留追光原型 v8 的全屏追光、粒子、线框场景与大字排版。支持 Motion On / Motion Off 和系统减少动态效果偏好；暂停动态时仍可滚动切换章节。手机使用原型的窄屏布局。脚本和样式在站内提供，外部请求仅用于 Google Fonts；没有追踪脚本、Cookie 或表单。保留正式标题、描述、canonical、Open Graph、favicon 和站点地图。
+保留追光原型 v8 的全屏追光、粒子、线框场景与大字排版。支持 Motion On / Motion Off 和系统减少动态效果偏好；暂停动态时仍可滚动切换章节。手机使用原型的窄屏布局。脚本和样式在站内提供，浏览器通过本站接口读取博客缓存，外部字体使用 Google Fonts；没有追踪脚本、Cookie 或表单。保留正式标题、描述、canonical、Open Graph、favicon 和站点地图。
+
+## 博客更新与卡片交互
+
+笔记板展示博客 RSS 最新三篇文章，标题、日期和链接来自真实数据。笔记板与小店支持鼠标倾斜、光泽反馈与点击进入；文章单独进入对应页面。
+
+Cloudflare 定时 Worker 每 12 小时抓取 RSS 并写入 KV，Pages Function 读取缓存；失败保留上次数据。首次配置、KV 绑定和验证步骤见 [cloudflare/blog-sync/README.md](cloudflare/blog-sync/README.md)。这些运行资源需要在批准上线时配置并部署。`npm test` 验证缓存行为，`npm run refresh:blog` 更新静态兜底快照。
+
+The shopfront shows six cached live store categories with their original names/icons and direct category links. Empty categories are skipped; insufficient categories show replenishment placeholders. The same 12-hour Worker refreshes both blog and shop caches independently. Run `npm run refresh:shop` to refresh the static shop fallback before publication.
