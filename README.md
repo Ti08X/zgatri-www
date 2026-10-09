@@ -54,7 +54,7 @@ npm run dev
 
 - 联系章节提供 Telegram 联系入口：https://t.me/zgatri。
 - 五个进度节点：逐光、涌现、构建、笔记与小店、联系。
-- 博客入口链接到 blog.zgatri.com；逐光小店统一链接到 https://zgatri.trade。
+- 博客入口链接到 blog.zgatri.com；逐光小店统一链接到 https://shop.zgatri.com。
 - canonical、Open Graph 和 sitemap 已使用正式域名 https://www.zgatri.com/；更换域名时同步修改。
 - 主站由 GitHub `main` 分支触发 Cloudflare Pages 更新；修改站点内容不需要改动 DNS。
 
