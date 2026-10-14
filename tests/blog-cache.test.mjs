@@ -38,10 +38,10 @@ test('API serves old articles after a failed refresh; missing binding falls back
 test('scheduled handler refreshes independent keys even when one source fails',async()=>{
  const oldFetch=globalThis.fetch, values=new Map(), kv={async get(key){return values.get(key)||null;},async put(key,text){values.set(key,JSON.parse(text));}};
  try {
-  globalThis.fetch=async url=>url.includes('/rss.xml')?new Response(xml):Response.json(url.endsWith('/categories')?{status_code:0,data:[]}:{status_code:0,data:[],pagination:{total:0,total_page:0}});
+  globalThis.fetch=async url=>String(url).includes('/rss.xml')?new Response(xml):String(url).includes('/shopApi/Shop/categoryList')?Response.json({code:1,data:[]}):Response.json({status_code:0,data:[]});
   await worker.scheduled({}, {BLOG_CACHE:kv});assert.equal(values.size,2);
   const oldShop=values.get('shop-categories:v1');
-  globalThis.fetch=async url=>url.includes('/rss.xml')?new Response(xml):new Response('bad',{status:502});
+  globalThis.fetch=async url=>String(url).includes('/rss.xml')?new Response(xml):String(url).includes('/shopApi/Shop/categoryList')?new Response('bad',{status:502}):Response.json({status_code:0,data:[]});
   await assert.rejects(worker.scheduled({}, {BLOG_CACHE:kv}));assert.deepEqual(values.get('shop-categories:v1'),oldShop);
  } finally {globalThis.fetch=oldFetch;}
 });
