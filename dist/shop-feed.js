@@ -9,6 +9,14 @@
   if(/codex/i.test(category.name)&&/接码|登录验证|验证码/i.test(category.name))return 'Codex 接码';
   return category.name;
  }
+ function iconPath(category){
+  const name=String(category?.name||'');
+  if(/chatgpt/i.test(name))return '/icons/chatgpt.svg';
+  if(/claude/i.test(name))return '/icons/claude.svg';
+  if(/gemini/i.test(name))return '/icons/gemini.svg';
+  if(/codex/i.test(name))return '/icons/codex.svg';
+  return '';
+ }
  let loading=false,lastRead=0;
  function render(data){
   if(data?.version!==1||!Array.isArray(data.categories)||data.categories.length>6)return false;
@@ -24,7 +32,8 @@
    if(c){el.href=c.url;el.target='_blank';el.rel='noopener';el.title=c.name+' · '+c.productCount+' 种商品';}
    const fallback=document.createElement('span');fallback.className='category-fallback';fallback.textContent=c?'◇':'＋';fallback.setAttribute('aria-hidden','true');
    let icon;
-   try{const u=new URL(c?.icon);if(u.origin==='https://shop.zgatri.com'&&u.pathname.startsWith('/uploads/category/')&&!u.username&&!u.password&&!u.search&&!u.hash){icon=document.createElement('img');icon.className='category-icon';icon.src=u.href;icon.alt='';icon.decoding='async';icon.addEventListener('error',()=>icon.replaceWith(fallback),{once:true});}}catch{}
+   const localIcon=c&&iconPath(c);
+   if(localIcon){icon=document.createElement('img');icon.className='category-icon';icon.src=localIcon;icon.alt='';icon.decoding='async';icon.addEventListener('error',()=>icon.replaceWith(fallback),{once:true});}
    const name=document.createElement('span');name.className='category-name';name.textContent=c?displayName(c):'补货中';
    const count=document.createElement('span');count.className='category-count';count.textContent=c?c.productCount+' 种商品':'COMING SOON';
    el.append(icon||fallback,name,count);fragment.append(el);
