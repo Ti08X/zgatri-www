@@ -1,5 +1,0 @@
-[
-  {"name": "示例订阅 A", "vendor": "某模型厂商", "usedBy": ["zhuguang", "yuki"], "price": 20, "currency": "USD", "cycle": "month", "since": "2026-01", "purpose": "这里写拿它做什么", "verdict": "值", "note": "这里写一句真实体验", "active": true, "sample": true},
-  {"name": "示例订阅 B", "vendor": "某云服务商", "usedBy": ["cindy"], "price": 588, "currency": "CNY", "cycle": "year", "since": "2026-09", "purpose": "这里写拿它做什么", "verdict": "一般", "note": "", "active": true, "sample": true},
-  {"name": "示例订阅 C", "vendor": "某工具", "usedBy": ["vivian"], "price": 9.9, "currency": "CNY", "cycle": "month", "since": "2026-10", "purpose": "已经退订的也可以留着", "verdict": "不值", "note": "退订原因写这里", "active": false, "sample": true}
-]
