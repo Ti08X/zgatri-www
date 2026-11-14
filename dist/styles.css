@@ -344,3 +344,11 @@ footer.slim nav{margin-top:0}
 .night .copy{color:var(--n-mute);margin:0}
 .night-status{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--n-mute)}
 .night-status time{color:var(--n-ink);font-variant-numeric:tabular-nums}
+
+/* slimmer night footer: slogan and contacts share one row */
+.night{padding-top:clamp(36px,4.5vw,60px);padding-bottom:calc(20px + env(safe-area-inset-bottom,0px))}
+.night-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 40px;margin-bottom:clamp(24px,3vw,36px)}
+.night .fin{font-size:clamp(30px,3.6vw,52px)}
+.night .glow{box-shadow:0 0 36px #ffdf3d55,0 0 80px #ffdf3d26}
+.pills{margin:0}
+.night-base{padding-top:14px}
