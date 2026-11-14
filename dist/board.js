@@ -1,9 +1,9 @@
 // Homepage extras: Beijing-time clock, latest notes, and the footer lamp.
 (function(){
- const clock=document.getElementById('clock');
- if(clock){
+ const clocks=document.querySelectorAll('[data-clock]');
+ if(clocks.length){
   const fmt=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',hour:'2-digit',minute:'2-digit',hour12:false});
-  const tick=()=>{clock.textContent=fmt.format(new Date());};
+  const tick=()=>{const t=fmt.format(new Date());clocks.forEach(c=>{c.textContent=t;});};
   tick();setInterval(tick,15000);
  }
 

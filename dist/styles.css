@@ -329,3 +329,18 @@ footer.slim nav{margin-top:0}
 .card-go{padding-top:6px;font-size:13px}
 .card-no{top:10px}
 @media (max-width:560px){.card-art{aspect-ratio:4/3}}
+
+/* footer: the lights go out at the end of the page */
+.night{--n-bg:#0d0e11;--n-ink:#f0ebdd;--n-mute:#8f897b;--n-line:#2a2d35;background:var(--n-bg);color:var(--n-ink);padding:clamp(56px,7vw,104px) var(--pad) calc(28px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--n-line)}
+.dark .night{--n-bg:#060709}
+.night .fin{color:var(--n-ink)}
+.glow{color:#15130f;background:#ffdf3d;padding:0 .08em;box-shadow:0 0 50px #ffdf3d66,0 0 110px #ffdf3d33}
+.pills{display:flex;flex-wrap:wrap;gap:12px;margin:clamp(28px,4vw,44px) 0 clamp(40px,6vw,72px)}
+.pills a{display:inline-flex;gap:8px;align-items:baseline;padding:10px 18px;border:1px solid var(--n-line);border-radius:999px;font-family:var(--mono);font-size:13px;color:var(--n-mute);transition:.25s}
+.pills a b{font-family:var(--sans);font-weight:600;font-size:14.5px;color:var(--n-ink)}
+.pills a:hover{background:#ffdf3d;border-color:#ffdf3d;color:#15130f}
+.pills a:hover b{color:#15130f}
+.night-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;padding-top:20px;border-top:1px solid var(--n-line)}
+.night .copy{color:var(--n-mute);margin:0}
+.night-status{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--n-mute)}
+.night-status time{color:var(--n-ink);font-variant-numeric:tabular-nums}
