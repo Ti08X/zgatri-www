@@ -237,3 +237,68 @@ footer.slim nav{margin-top:0}
 .crew:hover .crew-go{color:var(--ink)}
 @media (max-width:860px){.foot{grid-template-columns:1fr}.crew{justify-self:start;transform:none;margin-bottom:0}}
 @media (max-width:420px){.crew-faces img{width:60px;height:60px}}
+
+/* team: character cards on the homepage */
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;scroll-margin-top:84px}
+.card{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--ink);border-top:5px solid var(--accent);transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--accent)}
+.js .card.rv.in:hover{transform:translate(-3px,-3px)}
+.card-art{aspect-ratio:4/5;overflow:hidden;border-bottom:1px solid var(--ink);background:var(--paper)}
+.card-art img{width:100%;height:100%;object-fit:cover;object-position:50% 0;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.card:hover .card-art img{transform:scale(1.04)}
+.card-art.word{position:relative;display:grid;place-items:center;background:var(--hl);color:var(--hl-ink);container-type:size}
+.card-word{writing-mode:vertical-rl;white-space:nowrap;font-family:var(--serif);font-weight:900;font-size:clamp(56px,7vw,96px);font-size:min(25cqh,60cqw);line-height:1;letter-spacing:.06em}
+.card-art.word .card-mini{position:absolute;right:14px;bottom:14px;width:56px;height:56px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px var(--ink)}
+.card-no{position:absolute;top:16px;left:10px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;background:var(--accent);color:#fff;padding:1px 8px}
+.human .card-no{background:var(--ink);color:var(--paper)}
+.card-body{display:flex;flex-direction:column;gap:6px;padding:18px 18px 16px;flex:1}
+.card .code{font-size:11px}
+.card h3{font-family:var(--serif);font-weight:900;font-size:clamp(26px,2.4vw,34px);line-height:1.15}
+.card-tag{font-size:14px;color:var(--mute);min-height:3.4em}
+.card .traits{margin-top:4px;gap:6px}
+.card .traits li{font-size:12px;padding:1px 9px}
+.card .duties{margin-top:8px;font-size:13.5px}
+.card .duties li{padding:7px 0 7px 22px}
+.card .duties li::before{background:var(--accent);top:1.05em;width:10px}
+.card .state{margin-top:auto;padding-top:12px;font-size:11.5px}
+@media (max-width:1080px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}.card-art{aspect-ratio:1/1}}
+
+/* doors: notes with the latest posts, plus the shop */
+.doors.two{grid-template-columns:1.6fr 1fr}
+.door-blog:hover{background:var(--card);color:inherit;transform:none;box-shadow:none}
+.door-blog h3 a{border-bottom:1px solid currentColor}
+.door-blog h3 a:hover{background:var(--hl);color:var(--hl-ink)}
+.posts{list-style:none;padding:0;margin-top:4px;border-top:1px solid var(--line)}
+.posts li a{display:grid;grid-template-columns:5.2em 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.5}
+.posts li a:hover{background:var(--hl);color:var(--hl-ink)}
+.posts time{font-family:var(--mono);font-size:12px;color:var(--mute);padding-top:2px}
+@media (max-width:980px){.doors.two{grid-template-columns:1fr}}
+
+/* games on the homepage */
+.games{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.gcard{display:flex;flex-direction:column;gap:8px;border:1px solid var(--ink);background:var(--card);padding:0 0 18px;transition:transform .3s,box-shadow .3s}
+.gcard:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--ink)}
+.js .gcard.rv.in:hover{transform:translate(-3px,-3px)}
+.gshot{display:block;aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--ink);background:#0b1020;margin-bottom:6px}
+.gshot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.gcard:hover .gshot img{transform:scale(1.05)}
+.gmeta,.gname,.gdesc,.gby,.ggo{padding:0 18px}
+.gmeta{display:flex;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--mute)}
+.gname{font-family:var(--serif);font-weight:900;font-size:24px;line-height:1.25}
+.gdesc{font-size:14px;color:var(--mute);flex:1}
+.gby{font-family:var(--mono);font-size:12px}
+.ggo{font-size:14px;font-weight:600}
+.gcard:hover .ggo{text-decoration:underline;text-decoration-color:var(--hl);text-decoration-thickness:3px}
+@media (max-width:980px){.games{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.games{grid-template-columns:1fr}}
+
+/* footer: a lamp you can switch */
+.switch{display:flex;flex-direction:column;align-items:center;gap:6px;padding:26px 34px 22px;margin-bottom:40px;border:1px solid var(--ink);background:var(--card);color:var(--ink);box-shadow:8px 8px 0 var(--hl);cursor:pointer;font:inherit;transition:transform .3s,box-shadow .3s,background .5s}
+.switch:hover{transform:translate(-3px,-3px);box-shadow:11px 11px 0 var(--hl)}
+.big-bulb .filament{stroke:var(--hl);stroke-width:1.4}
+.dark .big-bulb .filament{filter:drop-shadow(0 0 3px var(--hl)) drop-shadow(0 0 10px var(--hl))}
+.dark .big-bulb{filter:drop-shadow(0 0 18px #ffdf3d55)}
+.switch-cap{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;color:var(--mute)}
+.switch-line{font-family:var(--serif);font-weight:700;font-size:18px}
+@media (max-width:860px){.switch{justify-self:start;margin-bottom:0}}
