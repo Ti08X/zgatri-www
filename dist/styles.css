@@ -241,8 +241,8 @@ footer.slim nav{margin-top:0}
 /* team: character cards on the homepage */
 .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;scroll-margin-top:16px}
 .card{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--ink);border-top:5px solid var(--accent);transition:transform .3s,box-shadow .3s}
-.card:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--accent)}
-.js .card.rv.in:hover{transform:translate(-3px,-3px)}
+.card:hover{box-shadow:6px 6px 0 var(--accent)}
+
 .card-art{aspect-ratio:5/4;overflow:hidden;border-bottom:1px solid var(--ink);background:var(--paper)}
 .card-art img{width:100%;height:100%;object-fit:cover;object-position:50% 0;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 .card:hover .card-art img{transform:scale(1.04)}
@@ -278,8 +278,8 @@ footer.slim nav{margin-top:0}
 /* games on the homepage */
 .games{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .gcard{display:flex;flex-direction:column;gap:5px;border:1px solid var(--ink);background:var(--card);padding:0 0 14px;transition:transform .3s,box-shadow .3s}
-.gcard:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--ink)}
-.js .gcard.rv.in:hover{transform:translate(-3px,-3px)}
+.gcard:hover{box-shadow:6px 6px 0 var(--ink)}
+
 .gshot{display:block;aspect-ratio:2/1;overflow:hidden;border-bottom:1px solid var(--ink);background:#0b1020;margin-bottom:6px}
 .gshot img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 .gcard:hover .gshot img{transform:scale(1.05)}
