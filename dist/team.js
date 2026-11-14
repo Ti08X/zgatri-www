@@ -24,10 +24,11 @@
    art.append(frame,body);frag.append(art);
   });
   box.replaceChildren(frag);Z.reveal(box);
-  // Gentle parallax: every portrait's content drifts a little against the scroll.
+  // Gentle parallax: a portrait rises into place as it scrolls up to the middle of the screen,
+  // then sits flush with the top of its frame so heads are never cut.
   if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
    const frames=[...box.querySelectorAll('.portrait')];let ticking=false;
-   const update=()=>{ticking=false;const vh=innerHeight;frames.forEach(f=>{const r=f.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;const p=(r.top+r.height/2-vh/2)/vh;f.style.setProperty('--py',(p*-48).toFixed(1)+'px');});};
+   const update=()=>{ticking=false;const vh=innerHeight;frames.forEach(f=>{const r=f.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;const p=Math.min(1,Math.max(0,(r.top+r.height/2-vh/2)/(vh/2)));f.style.setProperty('--py',(p*-r.height*.07).toFixed(1)+'px');});};
    addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(update);}},{passive:true});update();
   }
   if(location.hash)document.getElementById(location.hash.slice(1))?.scrollIntoView();

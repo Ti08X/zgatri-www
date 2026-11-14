@@ -129,7 +129,7 @@ footer nav a:hover{background:var(--hl);color:var(--hl-ink)}
 .profile{display:grid;grid-template-columns:minmax(200px,300px) 1fr;gap:clamp(24px,5vw,72px);padding:clamp(32px,5vw,64px) 0;border-top:2px solid var(--ink);scroll-margin-top:60px}
 .profile:first-child{border-top:0;padding-top:0}
 .portrait{aspect-ratio:3/4;border:1px solid var(--ink);background:var(--card);overflow:hidden;align-self:start;position:relative}
-.portrait img{width:100%;height:100%;object-fit:cover;display:block;transform:translateY(var(--py,0px)) scale(1.14);will-change:transform}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block;transform-origin:50% 0;transform:translateY(var(--py,0px)) scale(1.07);will-change:transform}
 .portrait.empty{display:grid;place-items:center;background:repeating-linear-gradient(135deg,var(--card) 0 14px,transparent 14px 28px),var(--paper)}
 .portrait-name{font-family:var(--serif);font-weight:900;font-size:clamp(90px,12vw,170px);line-height:1;opacity:.14}
 .portrait-note{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:12px;color:var(--mute)}
@@ -213,6 +213,6 @@ footer.slim nav{margin-top:0}
 @media (max-width:460px){.board-row{grid-template-columns:34px 1fr auto}}
 
 /* the boss gets a word poster instead of a portrait */
-.portrait.word{display:grid;place-items:center;background:var(--hl);color:var(--hl-ink)}
-.portrait-word{writing-mode:vertical-rl;font-family:var(--serif);font-weight:900;font-size:clamp(84px,9vw,128px);line-height:1;letter-spacing:.08em;transform:translateY(var(--py,0px))}
+.portrait.word{display:grid;place-items:center;background:var(--hl);color:var(--hl-ink);container-type:size}
+.portrait-word{writing-mode:vertical-rl;white-space:nowrap;font-family:var(--serif);font-weight:900;font-size:clamp(60px,9vw,128px);font-size:min(24cqh,62cqw);line-height:1;letter-spacing:.06em;transform:translateY(var(--py,0px))}
 .human .portrait{box-shadow:12px 12px 0 var(--ink)}
