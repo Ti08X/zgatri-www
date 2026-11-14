@@ -7,4 +7,4 @@
 
 /game/*
   ! Content-Security-Policy
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com 'sha256-PrudyOcACB7NjGuSbkRvnyVe4F5SEnzHG8PI82DYCDs=' 'sha256-eRuP5yqWx80M6oqvu6dvzXZCgbIpW7O/WNVPqq2cR6M='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com 'sha256-PrudyOcACB7NjGuSbkRvnyVe4F5SEnzHG8PI82DYCDs=' 'sha256-eRuP5yqWx80M6oqvu6dvzXZCgbIpW7O/WNVPqq2cR6M=' 'sha256-K8asqvgZt/jZyM6G1OkFDZq6zGaFqwdyNzMA/yJqTTg='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'

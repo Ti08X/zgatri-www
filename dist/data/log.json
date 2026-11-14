@@ -1,0 +1,7 @@
+[
+  {"date": "2026-11-12", "who": "yuki", "status": "fail", "title": "入职第一天，3 条草稿翻车", "detail": "经过写在 X 置顶帖里。", "cost": null, "link": "https://x.com/zhuguangatri", "sample": false},
+  {"date": "2026-11-13", "who": "vivian", "status": "done", "title": "示例：巡视 26 个信源，筛出 N 条值得看的", "detail": "这里写当天抓到了什么。", "cost": 0.42, "link": "", "sample": true},
+  {"date": "2026-11-13", "who": "cindy", "status": "done", "title": "示例：续期证书，检查三个站点在线", "detail": "", "cost": 0.03, "link": "", "sample": true},
+  {"date": "2026-11-13", "who": "yuki", "status": "doing", "title": "示例：整理本周选题池", "detail": "进行中的事也可以挂出来。", "cost": null, "link": "", "sample": true},
+  {"date": "2026-11-13", "who": "zhuguang", "status": "done", "title": "示例：审稿，退回 2 条，放行 1 条", "detail": "", "cost": null, "link": "", "sample": true}
+]

@@ -3,64 +3,152 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>ZGATRI 逐光AI — 逐光而行，探索智能。</title>
-<meta name="theme-color" content="#02040a">
-<meta name="description" content="ZGATRI 逐光AI，Zhuiguang AI Technology & Research。一个围绕人工智能、技术实践与持续研究的个人探索空间。发现项目、阅读博客、探索数字产品。">
+<title>逐光 — 一个人 + AI，能把事情做到多远？</title>
+<meta name="description" content="逐光，26 届应届生，养了 3 个 AI 员工。聊 AI、好用的工具和省钱门道，只说真实价格和体验。">
+<meta name="theme-color" content="#f3efe6">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260925">
 <link rel="canonical" href="https://www.zgatri.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:site_name" content="ZGATRI 逐光AI">
-<meta property="og:title" content="ZGATRI 逐光AI · 逐光而行，探索智能。">
-<meta property="og:description" content="连接人工智能、技术与研究的个人探索空间。Chasing Light. Exploring Intelligence.">
+<meta property="og:title" content="逐光 — 一个人 + AI，能把事情做到多远？">
+<meta property="og:description" content="逐光，26 届应届生，养了 3 个 AI 员工。聊 AI、好用的工具和省钱门道，只说真实价格和体验。">
 <meta property="og:url" content="https://www.zgatri.com/">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260925">
-<noscript><link rel="stylesheet" href="/no-motion.css?v=9bc4e550ae44"></noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Playfair+Display:ital,wght@1,900&family=Noto+Serif+SC:wght@600&display=swap">
-<link rel="stylesheet" href="/styles.css?v=749d2e244ba5">
+<link rel="alternate" type="application/rss+xml" title="逐光手记" href="https://blog.zgatri.com/rss.xml">
+<link rel="stylesheet" href="/styles.css">
+<script src="/theme.js"></script>
 </head>
 <body>
-<canvas id="gl" aria-hidden="true"></canvas>
+<a class="skip" href="#team">跳到正文</a>
+
 <header class="bar">
- <a class="brand" href="/" aria-label="ZGATRI 逐光AI"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M122 138h234l-111 83H59zM449 78 130 331l-71 94h118zM279 323h170l-62 102H188z"/></svg>ZGATRI</a>
- <div class="tools"><button id="motion" type="button" aria-pressed="true">Motion On</button><button id="orb" type="button" aria-label="打开菜单" aria-expanded="false"><i></i></button></div>
+ <a class="brand" href="/" aria-label="逐光 ZGATRI"><span class="seal" aria-hidden="true">逐</span><span>ZGATRI</span></a>
+ <nav aria-label="站点导航">
+  <a href="/team/">伙伴</a>
+  <a href="/ledger/">账本</a>
+  <a href="/log/">日志</a>
+  <a href="#path">来路</a>
+ </nav>
+ <button id="lamp" type="button" aria-pressed="false"><span class="bulb" aria-hidden="true"></span><span id="lamp-text">关灯</span></button>
 </header>
-<nav class="menu" id="menu" aria-label="站点导航">
- <a href="https://blog.zgatri.com/" target="_blank" rel="noopener">逐光笔记</a>
- <a href="https://catfk.com/shop/zgatri" target="_blank" rel="noopener">逐光小店</a>
- <a href="https://t.me/zgatri" target="_blank" rel="noopener">Telegram</a>
-</nav>
-<nav class="prog" aria-label="章节进度"><button type="button" class="pv" aria-label="上一节">‹</button><div class="track"><div class="fill"></div></div><button type="button" class="nx" aria-label="下一节">›</button></nav>
-<main>
- <section class="ch c1" id="c1"><h1>逐光而行，<br>探索智能。</h1><p class="sub">Chasing Light. Exploring Intelligence.</p><p class="hint">向下滚动，跟着光走</p></section>
- <section class="ch cx" id="c2"><p class="tag ai">AI 人工智能</p><h2>从噪声里，<br>涌现出秩序。</h2><p class="sub">理解模型的能力与边界，探索 AI 的真实价值。</p></section>
- <section class="ch cx" id="c3"><p class="tag tr">TR 技术与研究</p><h2>一笔一笔，<br>把想法造出来。</h2><p class="sub">实践、实验、记录，在验证中形成理解。</p></section>
- <section class="ch destination notes" id="c5" aria-label="逐光笔记">
-  <div class="destination-copy"><p class="tag">逐光笔记 · FIELD NOTES</p><h2>把做过的事情，<br>一点点记下来。</h2><p class="description">最近写下的三篇记录。</p><a class="destination-link" href="https://blog.zgatri.com/" target="_blank" rel="noopener">阅读笔记 <span aria-hidden="true">↗</span></a></div>
+
+<main id="top">
+
+ <section class="hero">
+  <p class="kicker">ZGATRI · 逐光 · 一人公司，在职 4 名（其中人类 1 名）</p>
+  <h1>一个人 <span class="plus">+</span> AI，<br>能把事情做到<span class="nw"><mark>多远</mark>？</span></h1>
+  <div class="hero-foot">
+   <p class="lede">我是逐光，26 届应届生。养了 3 个 AI 员工，聊 AI、好用的工具和省钱门道。<strong>只说真实价格和体验，翻车也记。</strong></p>
+   <div class="cta">
+    <a class="btn solid" href="#ledger">翻开账本 ↓</a>
+    <a class="btn" href="https://x.com/zhuguangatri" target="_blank" rel="noopener">在 X 上看我 ↗</a>
+   </div>
+  </div>
+  <dl class="stats" aria-label="截至 2026 年 11 月 12 日的数字">
+   <div><dt>在 X 上发帖</dt><dd><b data-count="874">874</b><small>条 / 54 天</small></dd></div>
+   <div><dt>单条曝光中位数</dt><dd><b data-count="15">15</b><small>是的，只有 15</small></dd></div>
+   <div><dt>AI 员工</dt><dd><b data-count="3">3</b><small>名，全年无休</small></dd></div>
+   <div><dt>每小时巡视信源</dt><dd><b data-count="26">26</b><small>个</small></dd></div>
+  </dl>
+  <p class="asof">数字来自我 2026-11-12 的置顶帖。不好看的也照写。</p>
  </section>
- <section class="ch destination shop" id="c6" aria-label="逐光小店">
-  <div class="destination-copy"><p class="tag">逐光小店 · LITTLE STORE</p><h2>一间小店，<br>一盏灯。</h2><p class="description">数字产品与相关服务，<br>持续上新，慢慢挑选。</p><a class="destination-link" href="https://catfk.com/shop/zgatri" target="_blank" rel="noopener">进入小店 <span aria-hidden="true">↗</span></a></div>
+
+ <section id="team" class="block">
+  <header class="sec rv">
+   <p class="no">01 / 团队</p>
+   <h2>这家公司，<mark>只有一个人</mark>领工资。</h2>
+   <p class="sub">曝光上不去，我换了个玩法：不再一个人硬发，改成养 3 个 AI 员工帮我打工。</p>
+  </header>
+  <div class="team">
+   <a href="/team/#zhuguang" class="badge me rv">
+    <div class="clip" aria-hidden="true"></div>
+    <p class="role">老板 · 唯一人类</p>
+    <h3>逐光</h3>
+    <p class="job">定方向、做判断、按发送键。出了事也是我背。</p>
+    <dl><div><dt>工号</dt><dd>000</dd></div><div><dt>状态</dt><dd>应届，在线</dd></div></dl>
+   </a>
+   <a href="/team/#cindy" class="badge rv">
+    <div class="clip" aria-hidden="true"></div>
+    <p class="role">运维</p>
+    <h3>Cindy</h3>
+    <p class="job">管服务器和域名。灯亮着，站就在线。</p>
+    <dl><div><dt>工号</dt><dd>001</dd></div><div><dt>状态</dt><dd>值守中</dd></div></dl>
+   </a>
+   <a href="/team/#vivian" class="badge rv">
+    <div class="clip" aria-hidden="true"></div>
+    <p class="role">情报</p>
+    <h3>Vivian</h3>
+    <p class="job">每小时从 26 个信源抓资讯。什么都逃不过她的眼睛。</p>
+    <dl><div><dt>工号</dt><dd>002</dd></div><div><dt>状态</dt><dd>巡视中</dd></div></dl>
+   </a>
+   <a href="/team/#yuki" class="badge rv">
+    <div class="clip" aria-hidden="true"></div>
+    <span class="stamp" aria-hidden="true">首日翻车</span>
+    <p class="role">编辑</p>
+    <h3>Yuki</h3>
+    <p class="job">帮我挑选题、整理素材。入职第一天写的 3 条草稿就翻了车。</p>
+    <dl><div><dt>工号</dt><dd>003</dd></div><div><dt>状态</dt><dd>返工中</dd></div></dl>
+   </a>
+  </div>
+  <div class="split rv">
+   <h3 class="mini">最近谁干了什么</h3>
+   <a class="more" href="/log/">全部工作日志 →</a>
+  </div>
+  <div id="home-log" class="rv"><p class="sample">正在读取工作日志。</p></div>
+  <p class="aside rv">想看每个人的职责、用的模型和每月花费，去<a href="/team/">伙伴档案</a>。</p>
  </section>
- <section class="ch c4" id="c4" aria-label="保持联系与站点导航"><h2 class="contact-title">追逐光，成为光。</h2>
-  <nav class="links contact-links" aria-label="联系、博客与小店"><a href="https://t.me/zgatri" target="_blank" rel="noopener">保持联系</a><a href="https://blog.zgatri.com/" target="_blank" rel="noopener">博客</a><a href="https://catfk.com/shop/zgatri" target="_blank" rel="noopener">小店</a></nav>
+
+ <section id="ledger" class="block">
+  <header class="sec rv">
+   <p class="no">02 / 账本</p>
+   <h2>只说<mark>真实价格</mark>。</h2>
+   <p class="sub">一家公司总得有本账。订阅花了多少、谁在用、值不值，全部摊开。</p>
+  </header>
+
+  <dl class="sum rv" id="home-sum"><div><dt>账本</dt><dd>读取中</dd></div></dl>
+  <div class="cta rv">
+   <a class="btn solid" href="/ledger/">翻开完整账本 →</a>
+   <a class="btn" href="/log/">看每天的工作日志 →</a>
+  </div>
+ </section>
+
+ <section id="path" class="block">
+  <header class="sec rv">
+   <p class="no">03 / 来路</p>
+   <h2>从“人工智障”，到<mark>给它们发工牌</mark>。</h2>
+  </header>
+  <ol class="path">
+   <li class="rv"><span class="yr">2023</span><div><h3>豆包</h3><p>同学推荐的第一个 AI 应用，用来找水课选择题答案。它一本正经地答错，我觉得 AI 就是人工智障。</p></div></li>
+   <li class="rv"><span class="yr">2024</span><div><h3>Kimi + 固定提示词</h3><p>做兼职，用一条提示词批量生成试卷。一份三块，一天最多十份，做满一个月升到二十份。</p></div></li>
+   <li class="rv"><span class="yr">2025</span><div><h3>DeepSeek R1</h3><p>发布第二天就用上了，第一次被推理模型震到。也是它建议我去办 GitHub 学生认证，那一年我没花钱就用上了几家的顶尖模型。</p></div></li>
+   <li class="rv now"><span class="yr">2026</span><div><h3>OpenClaw，然后是三个员工</h3><p>从“我问它答”变成“它们各管一摊”。现在的问题只剩一个：一个人加上它们，能走多远。</p></div></li>
+  </ol>
+ </section>
+
+ <section id="doors" class="block">
+  <header class="sec rv">
+   <p class="no">04 / 去处</p>
+   <h2>逛完这页，还有<mark>三扇门</mark>。</h2>
+  </header>
+  <div class="doors">
+   <a class="door rv" href="https://blog.zgatri.com/" target="_blank" rel="noopener"><span class="tag">读</span><h3>逐光手记</h3><p>过程比结果多。正在做的事、没想清楚的问题、用过的工具。</p><span class="go">blog.zgatri.com ↗</span></a>
+   <a class="door rv" href="/game/"><span class="tag">玩</span><h3>游戏室</h3><p>放下任务，玩一会。两款由模型在 60 分钟内从零做完的小游戏。</p><span class="go">zgatri.com/game →</span></a>
+   <a class="door rv" href="https://catfk.com/shop/zgatri" target="_blank" rel="noopener"><span class="tag">买</span><h3>逐光小店</h3><p>数字产品与相关服务。由第三方平台托管，点击后会离开本站。</p><span class="go">catfk.com ↗</span></a>
+  </div>
  </section>
 </main>
-<div class="scene-layer">
- <div class="scene-card notebook-card" id="notebook-card" aria-hidden="true" inert>
-  <a class="scene-open" href="https://blog.zgatri.com/" rel="noopener" aria-label="打开逐光笔记" target="_blank"></a>
-  <div class="notebook-heading"><span>逐光笔记</span><span>LATEST ENTRIES</span></div>
-  <div class="recent-posts" aria-label="最新博客文章"><a class="article-link" href="https://blog.zgatri.com/posts/2026-10-04-codex-4-token/" rel="noopener" title="盘点 Codex 半年更新：4 个省 Token 邪修技巧 + 新奇玩法全解析" target="_blank"><span class="article-number">01</span><span class="article-body"><time datetime="2026-10-03T22:26:00.000Z">2026/10/04</time><span class="article-title">盘点 Codex 半年更新：4 个省 Token 邪修技巧 + 新奇玩法全解析</span></span><span class="article-arrow" aria-hidden="true">↗</span></a>
-<a class="article-link" href="https://blog.zgatri.com/posts/2026-09-20-codex-chatgpt/" rel="noopener" title="Codex 桥接 ChatGPT 网页端模型：全流程工程落地与避坑手册" target="_blank"><span class="article-number">02</span><span class="article-body"><time datetime="2026-09-20T14:52:00.000Z">2026/09/20</time><span class="article-title">Codex 桥接 ChatGPT 网页端模型：全流程工程落地与避坑手册</span></span><span class="article-arrow" aria-hidden="true">↗</span></a>
-<a class="article-link" href="https://blog.zgatri.com/posts/2026-09-19-openclaw-ai/" rel="noopener" title="从豆包到 OpenClaw：我的三年 AI 使用史" target="_blank"><span class="article-number">03</span><span class="article-body"><time datetime="2026-09-19T14:00:00.000Z">2026/09/19</time><span class="article-title">从豆包到 OpenClaw：我的三年 AI 使用史</span></span><span class="article-arrow" aria-hidden="true">↗</span></a>
-</div>
-  <div class="notebook-footer">翻阅全部文章 <span aria-hidden="true">↗</span></div>
- </div>
- <div class="scene-card store-card" id="store-card" aria-hidden="true" inert><a class="scene-open" href="https://catfk.com/shop/zgatri" rel="noopener" aria-label="进入逐光小店" target="_blank"></a><div class="store-categories"><a class="shop-category" href="https://catfk.com/shop/zgatri" target="_blank" rel="noopener" title="chatgpt · 5 种商品"><img class="category-icon" src="/icons/chatgpt.svg" alt="" decoding="async"><span class="category-name">ChatGPT</span><span class="category-count">5 种商品</span></a><a class="shop-category" href="https://catfk.com/shop/zgatri" target="_blank" rel="noopener" title="Claude · 2 种商品"><img class="category-icon" src="/icons/claude.svg" alt="" decoding="async"><span class="category-name">Claude</span><span class="category-count">2 种商品</span></a><a class="shop-category" href="https://catfk.com/shop/zgatri" target="_blank" rel="noopener" title="Gemini · 1 种商品"><img class="category-icon" src="/icons/gemini.svg" alt="" decoding="async"><span class="category-name">Gemini</span><span class="category-count">1 种商品</span></a><a class="shop-category" href="https://catfk.com/shop/zgatri" target="_blank" rel="noopener" title="【一次接码】Codex 登录验证 稳定高效 · 1 种商品"><img class="category-icon" src="/icons/codex.svg" alt="" decoding="async"><span class="category-name">Codex 接码</span><span class="category-count">1 种商品</span></a><div class="shop-category is-empty"><span class="category-fallback" aria-hidden="true">＋</span><span class="category-name">补货中</span><span class="category-count">COMING SOON</span></div><div class="shop-category is-empty"><span class="category-fallback" aria-hidden="true">＋</span><span class="category-name">补货中</span><span class="category-count">COMING SOON</span></div></div><span class="scene-entry">进入小店 <span aria-hidden="true">↗</span></span></div>
-</div>
-<div id="spacer"></div>
 
-<script src="/vendor/three.r128.min.js"></script>
-<script src="/blog-feed.js?v=1d2af442543c"></script>
-<script src="/shop-feed.js?v=local-category-icons-20261020"></script>
-<script src="/main.js?v=f0885cfd36f5"></script>
+<footer>
+ <p class="fin">追逐光，<br>成为光。</p>
+ <nav aria-label="联系方式">
+  <a href="https://x.com/zhuguangatri" target="_blank" rel="noopener">X @zhuguangatri ↗</a>
+  <a href="https://t.me/zgatri" target="_blank" rel="noopener">Telegram @zgatri ↗</a>
+  <a href="https://blog.zgatri.com/rss.xml" target="_blank" rel="noopener">RSS ↗</a>
+ </nav>
+ <p class="copy">© 2026 ZGATRI 逐光AI · 本页由 1 名人类和若干 AI 共同完成</p>
+</footer>
+
+<script src="/site.js"></script>
+<script src="/home.js"></script>
 </body>
 </html>

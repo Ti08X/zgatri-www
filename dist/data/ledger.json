@@ -1,0 +1,10 @@
+{
+  "usdToCny": 6.67,
+  "rateNote": "美元按 1 USD = 6.67 CNY 折算，改汇率只改这一处。",
+  "incomePolicy": "收入暂未公开。想清楚公开口径后再放，先把花出去的钱记清楚。",
+  "months": [
+    {"month": "2026-09", "expense": 180, "income": null, "note": "示例", "sample": true},
+    {"month": "2026-10", "expense": 240, "income": null, "note": "示例", "sample": true},
+    {"month": "2026-11", "expense": 210, "income": null, "note": "示例", "sample": true}
+  ]
+}
