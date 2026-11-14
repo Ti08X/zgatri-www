@@ -3,7 +3,7 @@
  Z.load('team').then(team=>{
   const frag=document.createDocumentFragment();
   team.forEach(m=>{
-   const art=Z.el('article','profile rv'+(m.human?' human':''));art.id=m.id;
+   const art=Z.el('article','profile c-'+m.id+' rv'+(m.human?' human':''));art.id=m.id;
 
    // Portrait: drop an image into /img/ and put its path in team.json.
    const frame=Z.el('div','portrait');
@@ -13,10 +13,12 @@
    else empty();
    frame.append(Z.el('span','portrait-no','NO. '+m.no));
 
-   const body=Z.el('div','profile-body');
-   body.append(Z.el('p','role',m.role),Z.el('h2',null,m.name),Z.el('p','profile-tag',m.tagline));
+   const body=Z.el('div','profile-body');body.dataset.en=m.en||'';
+   body.append(Z.el('p','code',(m.code||'')+' · '+m.role),Z.el('h2',null,m.name),Z.el('p','profile-tag',m.tagline));
+   if(m.traits){const tr=Z.el('ul','traits');m.traits.forEach(t=>tr.append(Z.el('li',null,t)));body.append(tr);}
    const duties=Z.el('ul','duties');m.duties.forEach(d=>duties.append(Z.el('li',null,d)));
    body.append(Z.el('h3','mini','负责什么'),duties);
+   if(m.status){const st=Z.el('p','state');st.append(Z.el('i','dot'),'状态 · '+m.status);body.append(st);}
 
    art.append(frame,body);frag.append(art);
   });

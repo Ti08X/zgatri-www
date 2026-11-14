@@ -42,7 +42,7 @@ mark{color:inherit;background:linear-gradient(var(--hl),var(--hl)) no-repeat 0 7
 /* hero */
 .hero{padding:clamp(48px,9vw,120px) var(--pad) clamp(40px,6vw,72px);border-bottom:1px solid var(--line)}
 .kicker,.no{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--mute)}
-h1{font-family:var(--serif);font-weight:900;font-size:clamp(46px,8vw,118px);line-height:1.08;text-wrap:balance;letter-spacing:-.01em;margin:.35em 0 .5em}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(36px,5.2vw,76px);line-height:1.08;text-wrap:balance;letter-spacing:-.01em;margin:.35em 0 .5em}
 .nw{white-space:nowrap}
 .plus{font-family:var(--mono);font-weight:400;color:var(--red)}
 .hero-foot{display:grid;grid-template-columns:minmax(0,34em) auto;gap:32px;align-items:end;justify-content:space-between}
@@ -57,7 +57,7 @@ h1{font-family:var(--serif);font-weight:900;font-size:clamp(46px,8vw,118px);line
 /* sections */
 .block{padding:clamp(64px,9vw,128px) var(--pad);border-bottom:1px solid var(--line)}
 .sec{max-width:980px;margin-bottom:clamp(32px,5vw,64px)}
-h2{text-wrap:balance;font-family:var(--serif);font-weight:900;font-size:clamp(32px,5.6vw,76px);line-height:1.2;margin:.3em 0 .4em}
+h2{text-wrap:balance;font-family:var(--serif);font-weight:900;font-size:clamp(28px,3.8vw,50px);line-height:1.2;margin:.3em 0 .4em}
 .sub{font-size:clamp(15px,1.4vw,18px);color:var(--mute);max-width:36em}
 .aside{margin-top:28px;font-size:14px;color:var(--mute)}
 .aside a,.more{border-bottom:1px solid currentColor;color:var(--ink)}
@@ -71,7 +71,7 @@ h2{text-wrap:balance;font-family:var(--serif);font-weight:900;font-size:clamp(32
 .badge.me:hover{box-shadow:6px 6px 0 var(--hl)}
 .clip{position:absolute;top:14px;left:50%;width:44px;height:10px;margin-left:-22px;border-radius:99px;background:var(--paper);border:1px solid var(--ink)}
 .role{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;opacity:.65}
-.badge h3{font-family:var(--serif);font-weight:900;font-size:clamp(30px,3.4vw,46px);line-height:1.2}
+.badge h3{font-family:var(--serif);font-weight:900;font-size:clamp(26px,2.6vw,36px);line-height:1.2}
 .job{font-size:14.5px;flex:1;min-height:5.2em;opacity:.85}
 .badge dl{display:flex;gap:20px;border-top:1px dashed currentColor;padding-top:12px;margin-top:8px;font-family:var(--mono);font-size:12px}
 .badge dt{opacity:.55}
@@ -87,7 +87,7 @@ h2{text-wrap:balance;font-family:var(--serif);font-weight:900;font-size:clamp(32
 
 /* footer */
 footer{padding:clamp(64px,9vw,128px) var(--pad) calc(40px + env(safe-area-inset-bottom,0px))}
-.fin{font-family:var(--serif);font-weight:900;font-size:clamp(46px,8vw,118px);line-height:1.1}
+.fin{font-family:var(--serif);font-weight:900;font-size:clamp(34px,5vw,72px);line-height:1.1}
 footer nav{display:flex;flex-wrap:wrap;gap:12px 32px;margin:48px 0 40px;font-family:var(--mono);font-size:14px}
 footer nav a{border-bottom:1px solid currentColor}
 footer nav a:hover{background:var(--hl);color:var(--hl-ink)}
@@ -119,14 +119,14 @@ footer nav a:hover{background:var(--hl);color:var(--hl-ink)}
 /* ---------- shared pieces for the data-driven pages ---------- */
 .bar nav a[aria-current="page"]{color:var(--ink);border-bottom:2px solid var(--hl)}
 .hero.page{padding-top:clamp(40px,6vw,84px);padding-bottom:clamp(32px,4vw,56px)}
-.hero.page h1{font-size:clamp(38px,6.2vw,92px)}
+.hero.page h1{font-size:clamp(32px,4.4vw,60px)}
 .hero.page .lede{max-width:36em}
 .sample{font-size:13px;color:var(--red);margin-top:14px}
 .mini{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;color:var(--mute);margin:clamp(28px,4vw,48px) 0 14px}
 .aside.tight{margin-top:14px}
 
 /* team page */
-.profile{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:clamp(24px,5vw,72px);padding:clamp(36px,6vw,80px) 0;border-top:2px solid var(--ink);scroll-margin-top:60px}
+.profile{display:grid;grid-template-columns:minmax(200px,300px) 1fr;gap:clamp(24px,5vw,72px);padding:clamp(32px,5vw,64px) 0;border-top:2px solid var(--ink);scroll-margin-top:60px}
 .profile:first-child{border-top:0;padding-top:0}
 .portrait{aspect-ratio:3/4;border:1px solid var(--ink);background:var(--card);overflow:hidden;align-self:start;position:sticky;top:84px}
 .portrait img{width:100%;height:100%;object-fit:cover;display:block}
@@ -155,3 +155,49 @@ footer.slim nav{margin-top:0}
 }
 
 .bar nav a,#lamp,.brand{white-space:nowrap;flex:none}
+
+/* accents: one colour per teammate */
+.c-zhuguang{--accent:var(--hl)}
+.c-cindy{--accent:#e0503a}
+.c-vivian{--accent:#8a76f0}
+.c-yuki{--accent:#2f9fe0}
+
+/* hero: headline left, duty board right */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,400px);gap:clamp(32px,5vw,72px);align-items:center}
+.hero-main h1{margin:.4em 0 .45em}
+.hero-main .lede{max-width:30em;margin-bottom:28px}
+.board{background:var(--ink);color:var(--paper);padding:22px 22px 18px;box-shadow:8px 8px 0 var(--hl);font-size:14px}
+.board-head{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;opacity:.6;padding-bottom:12px;border-bottom:1px dashed currentColor}
+.board-head time{font-variant-numeric:tabular-nums}
+.board-row{display:grid;grid-template-columns:14px 4.6em 2.6em 1fr;align-items:center;gap:10px;padding:13px 0;border-bottom:1px solid #ffffff1f;transition:padding .25s,background .25s}
+.dark .board-row{border-bottom-color:#0000001f}
+.board-row:hover{padding-left:8px;background:#ffffff0d}
+.board-row b{font-family:var(--serif);font-size:17px}
+.b-role{font-family:var(--mono);font-size:11.5px;color:var(--accent)}
+.b-doing{opacity:.75;text-align:right}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 var(--accent);animation:pulse 2.4s infinite}
+.c-vivian .dot{animation-delay:.6s}.c-yuki .dot{animation-delay:1.2s}.c-zhuguang .dot{animation-delay:1.8s}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 70%,transparent)}70%,100%{box-shadow:0 0 0 9px transparent}}
+.board-foot{margin-top:14px;font-family:var(--mono);font-size:11.5px;opacity:.55}
+
+/* staff badges pick up their colour */
+.badge{border-top:5px solid var(--accent)}
+.badge .role{color:var(--accent);opacity:1;font-weight:600}
+.badge.me .role{color:var(--hl)}
+
+/* team page: character cards */
+.profile-body{position:relative;isolation:isolate}
+.profile-body::before{content:attr(data-en);position:absolute;right:0;top:-.15em;font-family:var(--serif);font-weight:900;font-size:clamp(64px,10vw,150px);line-height:1;color:transparent;-webkit-text-stroke:1px var(--accent);opacity:.35;pointer-events:none;z-index:-1}
+.profile .portrait{box-shadow:12px 12px 0 var(--accent);border-color:var(--ink)}
+.profile .portrait-name{color:var(--accent);opacity:.55}
+.profile .portrait-no{background:var(--accent);color:#fff}
+.human .portrait-no{color:var(--hl-ink)}
+.code{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--accent);font-weight:600}
+.profile-body h2{font-size:clamp(34px,4vw,56px);margin:.05em 0 .15em}
+.traits{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.traits li{list-style:none;font-size:13px;padding:2px 12px;border:1px solid var(--accent);color:var(--ink);background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.profile .duties li::before{background:var(--accent)}
+.state{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-family:var(--mono);font-size:12.5px;color:var(--mute)}
+@media (max-width:980px){.hero-grid{grid-template-columns:1fr}.board{max-width:460px}}
+@media (max-width:460px){.board-row{grid-template-columns:14px 1fr auto}.b-doing{grid-column:2/-1;text-align:left;font-size:13px}}
+@media (prefers-reduced-motion:reduce){.dot{animation:none}}
