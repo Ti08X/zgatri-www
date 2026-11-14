@@ -306,3 +306,19 @@ footer.slim nav{margin-top:0}
 .human .card-go{color:var(--ink)}
 .card:hover .card-go{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
 .card-tag{min-height:0}
+
+/* logo: the site icon itself */
+.brand .mark{width:30px;height:30px;display:block;border-radius:7px}
+
+/* footer: slogan left, contacts right */
+.foot{align-items:end}
+.foot .copy{margin-top:40px}
+.find{display:flex;flex-direction:column;min-width:min(360px,100%);margin:0 0 4px;gap:0;font-family:var(--sans)}
+.find-cap{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--mute);padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.find a{display:grid;grid-template-columns:6.5em 1fr auto;gap:12px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px;transition:padding .25s,background .25s}
+.find a:hover{background:var(--hl);color:var(--hl-ink);padding-left:10px;padding-right:10px}
+.find span{font-family:var(--mono);font-size:12.5px;color:var(--mute)}
+.find a:hover span{color:inherit}
+.find b{font-weight:600}
+.find i{font-style:normal}
+@media (max-width:860px){.find{min-width:0;width:100%}}
