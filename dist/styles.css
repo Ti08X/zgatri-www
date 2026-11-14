@@ -352,3 +352,57 @@ footer.slim nav{margin-top:0}
 .night .glow{box-shadow:0 0 36px #ffdf3d55,0 0 80px #ffdf3d26}
 .pills{margin:0}
 .night-base{padding-top:14px}
+
+/* game room */
+.g-gravity{--accent:#2fa77c}
+.g-recoil{--accent:#e0507a}
+.g-lumen{--accent:#2f9fe0}
+.room-rules{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin-top:22px}
+.room-rules li{font-family:var(--mono);font-size:12px;padding:4px 12px;border:1px solid var(--line);color:var(--mute)}
+.room-list{padding-top:clamp(28px,3.5vw,48px)}
+.rooms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.room{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--ink);border-top:5px solid var(--accent);transition:box-shadow .3s}
+.room:hover{box-shadow:6px 6px 0 var(--accent)}
+.room .gshot{margin:0}
+.room:hover .gshot img{transform:scale(1.05)}
+.room-body{display:flex;flex-direction:column;gap:8px;padding:14px 16px 16px;flex:1}
+.room-body .gmeta{padding:0}
+.room h2{font-family:var(--serif);font-weight:900;font-size:22px;line-height:1.25;margin:0}
+.room h2 span{margin-left:10px;font-family:var(--mono);font-weight:400;font-size:11.5px;letter-spacing:.12em;color:var(--mute)}
+.room-tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0}
+.room-tags li{font-size:11.5px;padding:1px 8px;border:1px solid var(--accent);background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.room-desc{font-size:13.5px;line-height:1.6}
+.room-ctl{font-size:12px;line-height:1.6;color:var(--mute)}
+.room-by{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-top:4px;padding-top:10px;border-top:1px dashed var(--line)}
+.room-by small{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--mute)}
+.room-by b{font-family:var(--mono);font-size:13px;color:var(--accent)}
+.room-stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
+.room-stats div{padding:8px 10px}
+.room-stats div+div{border-left:1px solid var(--line)}
+.room-stats dt{font-size:11px;color:var(--mute)}
+.room-stats dd{font-family:var(--mono);font-size:14px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.room-usage summary{cursor:pointer;font-size:12.5px;color:var(--mute)}
+.room-usage summary:hover{color:var(--ink)}
+.room-usage dl{display:grid;grid-template-columns:1fr auto;gap:4px 12px;margin:10px 0 6px;font-size:12.5px}
+.room-usage dt{color:var(--mute)}
+.room-usage dd{font-family:var(--mono);text-align:right}
+.room-usage p{font-size:11.5px;color:var(--mute);line-height:1.6}
+.room-play{margin-top:auto;align-self:flex-start;padding:9px 18px;font-size:14px}
+.challenge .disclosure{border-top:1px solid var(--ink);max-width:980px}
+.challenge .disclosure:last-of-type{border-bottom:1px solid var(--ink)}
+.challenge .disclosure summary{display:flex;justify-content:space-between;gap:16px;padding:16px 0;cursor:pointer;font-weight:600;font-size:16px}
+.challenge .disclosure summary span{font-family:var(--mono);font-weight:400;font-size:12px;color:var(--mute)}
+.challenge .prompt{white-space:pre-wrap;font-family:var(--mono);font-size:13px;line-height:1.75;background:var(--card);border:1px solid var(--line);padding:18px;margin-bottom:18px}
+.cost-detail{padding-bottom:20px;font-size:14px}
+.cost-detail h3{font-size:15px;margin:18px 0 8px}
+.cost-detail p{color:var(--mute);line-height:1.7}
+.overflow-table{overflow-x:auto}
+.price-table{width:100%;border-collapse:collapse;font-size:13px}
+.price-table th,.price-table td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+.price-table th{font-family:var(--mono);font-weight:500;font-size:11.5px;color:var(--mute)}
+.formula{font-family:var(--mono);font-size:12.5px;line-height:1.8;background:var(--card);border-left:3px solid var(--hl);padding:10px 14px;margin:8px 0}
+.cost-footnote,.pricing-sources{font-size:12.5px;margin-top:14px;color:var(--mute);line-height:1.7}
+.pricing-sources a{border-bottom:1px solid currentColor}
+.challenge .aside{margin-top:24px}
+@media (max-width:1080px){.rooms{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.rooms{grid-template-columns:1fr}}
